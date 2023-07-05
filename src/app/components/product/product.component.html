@@ -1,176 +1,27 @@
 <div class="container">
-    
-    <mat-card class="product-card">
+    <mat-card class="product-card" *ngFor="let product of ELEMENT_DATA">
         <div class="header-product">
-            <p class="product-name">AWP | Chromatic Aberration (Field-Tested)</p>
-            <p class="product-type">Factor new</p>
+            <div class="product-infos">
+                <p class="product-name">{{product.name}}</p>
+                <p *ngIf="product.description == 'STT'">(StatTrak™)</p>
+            </div>
+            <p class="product-type ft" *ngIf="product.productType[0] == 'FT'">FIELD TESTED</p>
+            <p class="product-type bs" *ngIf="product.productType[0] == 'BS'">BATTLE SCARED</p>
+            <p class="product-type ww" *ngIf="product.productType[0] == 'WW'">WELL WORM</p>
+            <p class="product-type fn" *ngIf="product.productType[0] == 'FN'">FACTOR NEW</p>
         </div>
-        <img src="https://g.fp.ps.netease.com/market/file/62bf990b36cc4b81eddcff97rfCFwx9J04" class="product-img">
+        <img src="{{product.img}}" class="product-img">
         <div class="product-price">
             <div class="old-price">
                 <p>R$ </p>
-                <h4>1000.00</h4>
+                <h4>{{product.oldPrice}}</h4>
             </div>
     
             <div class="new-price">
                 <p>R$</p>
-                <h2>999.00</h2>
+                <h2>{{product.newPrice}}</h2>
             </div>
         </div>
         <button mat-raised-button color="accent" class="btn-buy-product">Comprar</button>
     </mat-card>
-    <mat-card class="product-card">
-        <div class="header-product">
-            <p class="product-name">AWP | Chromatic Aberration (Field-Tested)</p>
-            <p class="product-type">Factor new</p>
-        </div>
-        <img src="https://g.fp.ps.netease.com/market/file/62bf990b36cc4b81eddcff97rfCFwx9J04" class="product-img">
-        <div class="product-price">
-            <div class="old-price">
-                <p>R$ </p>
-                <h4>1000.00</h4>
-            </div>
-    
-            <div class="new-price">
-                <p>R$</p>
-                <h2>999.00</h2>
-            </div>
-        </div>
-        <button mat-raised-button color="accent" class="btn-buy-product">Comprar</button>
-    </mat-card>
-    <mat-card class="product-card">
-        <div class="header-product">
-            <p class="product-name">AWP | Chromatic Aberration (Field-Tested)</p>
-            <p class="product-type">Factor new</p>
-        </div>
-        <img src="https://g.fp.ps.netease.com/market/file/62bf990b36cc4b81eddcff97rfCFwx9J04" class="product-img">
-        <div class="product-price">
-            <div class="old-price">
-                <p>R$ </p>
-                <h4>1000.00</h4>
-            </div>
-    
-            <div class="new-price">
-                <p>R$</p>
-                <h2>999.00</h2>
-            </div>
-        </div>
-        <button mat-raised-button color="accent" class="btn-buy-product">Comprar</button>
-    </mat-card>
-    <mat-card class="product-card">
-        <div class="header-product">
-            <p class="product-name">AWP | Chromatic Aberration (Field-Tested)</p>
-            <p class="product-type">Factor new</p>
-        </div>
-        <img src="https://g.fp.ps.netease.com/market/file/62bf990b36cc4b81eddcff97rfCFwx9J04" class="product-img">
-        <div class="product-price">
-            <div class="old-price">
-                <p>R$ </p>
-                <h4>1000.00</h4>
-            </div>
-    
-            <div class="new-price">
-                <p>R$</p>
-                <h2>999.00</h2>
-            </div>
-        </div>
-        <button mat-raised-button color="accent" class="btn-buy-product">Comprar</button>
-    </mat-card>
-    <mat-card class="product-card">
-        <div class="header-product">
-            <p class="product-name">AWP | Chromatic Aberration (Field-Tested)</p>
-            <p class="product-type">Factor new</p>
-        </div>
-        <img src="https://g.fp.ps.netease.com/market/file/62bf990b36cc4b81eddcff97rfCFwx9J04" class="product-img">
-        <div class="product-price">
-            <div class="old-price">
-                <p>R$ </p>
-                <h4>1000.00</h4>
-            </div>
-    
-            <div class="new-price">
-                <p>R$</p>
-                <h2>999.00</h2>
-            </div>
-        </div>
-        <button mat-raised-button color="accent" class="btn-buy-product">Comprar</button>
-    </mat-card>
-    <mat-card class="product-card">
-        <div class="header-product">
-            <p class="product-name">AWP | Chromatic Aberration (Field-Tested)</p>
-            <p class="product-type">Factor new</p>
-        </div>
-        <img src="https://g.fp.ps.netease.com/market/file/62bf990b36cc4b81eddcff97rfCFwx9J04" class="product-img">
-        <div class="product-price">
-            <div class="old-price">
-                <p>R$ </p>
-                <h4>1000.00</h4>
-            </div>
-    
-            <div class="new-price">
-                <p>R$</p>
-                <h2>999.00</h2>
-            </div>
-        </div>
-        <button mat-raised-button color="accent" class="btn-buy-product">Comprar</button>
-    </mat-card>
-    <mat-card class="product-card">
-        <div class="header-product">
-            <p class="product-name">AWP | Chromatic Aberration (Field-Tested)</p>
-            <p class="product-type">Factor new</p>
-        </div>
-        <img src="https://g.fp.ps.netease.com/market/file/62bf990b36cc4b81eddcff97rfCFwx9J04" class="product-img">
-        <div class="product-price">
-            <div class="old-price">
-                <p>R$ </p>
-                <h4>1000.00</h4>
-            </div>
-    
-            <div class="new-price">
-                <p>R$</p>
-                <h2>999.00</h2>
-            </div>
-        </div>
-        <button mat-raised-button color="accent" class="btn-buy-product">Comprar</button>
-    </mat-card>
-    <mat-card class="product-card">
-        <div class="header-product">
-            <p class="product-name">AWP | Chromatic Aberration (Field-Tested)</p>
-            <p class="product-type">Factor new</p>
-        </div>
-        <img src="https://g.fp.ps.netease.com/market/file/62bf990b36cc4b81eddcff97rfCFwx9J04" class="product-img">
-        <div class="product-price">
-            <div class="old-price">
-                <p>R$ </p>
-                <h4>1000.00</h4>
-            </div>
-    
-            <div class="new-price">
-                <p>R$</p>
-                <h2>999.00</h2>
-            </div>
-        </div>
-        <button mat-raised-button color="accent" class="btn-buy-product">Comprar</button>
-    </mat-card>
-    <mat-card class="product-card">
-        <div class="header-product">
-            <p class="product-name">AWP | Chromatic Aberration (Field-Tested)</p>
-            <p class="product-type">Factor new</p>
-        </div>
-        <img src="https://g.fp.ps.netease.com/market/file/62bf990b36cc4b81eddcff97rfCFwx9J04" class="product-img">
-        <div class="product-price">
-            <div class="old-price">
-                <p>R$ </p>
-                <h4>1000.00</h4>
-            </div>
-    
-            <div class="new-price">
-                <p>R$</p>
-                <h2>999.00</h2>
-            </div>
-        </div>
-        <button mat-raised-button color="accent" class="btn-buy-product">Comprar</button>
-    </mat-card>
-
-
 </div>
