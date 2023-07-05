@@ -1,0 +1,60 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <img src="https://www.freepnglogos.com/uploads/counter-strike-png-logo/counter-strike-global-offensive-logo-png-0.png" class="img-logo-menu" alt="" >
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="home" *ngIf="true">
+                R$ 2.000.000,00
+            </a>
+            <a mat-list-item routerLink="home">
+                <i class="material-icons" matBadge="15">home</i>
+                Home
+            </a>
+            <a mat-list-item routerLink="store">
+                <i class="material-icons">store</i>
+                Store
+            </a>
+            <a mat-list-item routerLink="login">
+                <i class="material-icons">timeline</i>
+                Dashboard
+            </a>
+            <a mat-list-item routerLink="tecnics">
+                
+                <i class="material-icons" >assignment</i>
+                Order
+            </a>
+            <a mat-list-item routerLink="/users">
+                <i class="material-icons">person</i>
+                Users
+            </a>
+            <a mat-list-item routerLink="login">
+                <i class="material-icons">table_chart</i>
+                Stock
+            </a>
+            <a mat-list-item routerLink="goal">
+                <i class="material-icons">stars</i>
+                Goal
+            </a>
+            <a mat-list-item routerLink="login">
+                <i class="material-icons">settings</i>
+                Settings
+            </a>
+            <div class="nav-logout">
+                <a mat-list-item routerLink="login">
+                    <i class="material-icons">power_settings_new</i>
+                    Logout
+                </a>
+            </div>
+        </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+        <app-header></app-header>
+        <button class="menu mat-elevation-z8" (click)="drawer.toggle()"  mat-icon-button>
+            <mat-icon>
+                menu
+            </mat-icon>
+        </button>
+        <router-outlet></router-outlet>
+    </div>
+  
+  </mat-drawer-container>

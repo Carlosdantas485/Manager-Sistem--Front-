@@ -1,0 +1,32 @@
+.container{
+    height: 100%;
+    background-color: #1B2838;
+    color: white;
+
+    .sidenav{
+        width: 13rem;
+        background: linear-gradient(180deg, rgba(27,45,65,1) 0%, rgba(23,29,37,1) 76%);
+    }
+    
+    .material-icons{
+        color: white;
+    }
+
+    .nav-list{
+        .nav-logout{
+            background-color: red;
+        }
+    }
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    margin: 1rem;
+}
+
+.img-logo-menu{
+    width: 60%;
+    margin-left: 30px;
+}
+
